@@ -4,14 +4,14 @@ from .models import Album
 from artists.models import Artist
 from albums.serializers import AlbumSerializer
 from rest_framework import status
-from django.http import JsonResponse
 
 
+@api_view(['GET'])
 def Routes_album(request):
     routes = [
         'showalbums/'
     ]
-    return JsonResponse(routes, safe=False)
+    return Response(routes)
 
 
 @api_view(['POST'])

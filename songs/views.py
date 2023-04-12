@@ -1,21 +1,17 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Song
 from albums.models import Album
 from songs.serializers import SongSerializer
 from rest_framework import status
-from django.http import JsonResponse
-
-# Create your views here.
 
 
+@api_view(['GET'])
 def Routes_song(request):
     routes = [
         'showsong/'
     ]
-    return JsonResponse(routes, safe=False)
+    return Response(routes)
 
 
 @api_view(['POST'])
