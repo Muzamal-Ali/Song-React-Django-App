@@ -1,9 +1,11 @@
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view,permission_classes
 from .models import Song
 from albums.models import Album
 from songs.serializers import SongSerializer
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
+from django.shortcuts import render
 
 
 @api_view(['GET'])
@@ -13,8 +15,12 @@ def Routes_song(request):
     ]
     return Response(routes)
 
+@api_view(['GET'])
+def Routes_song1(request):
+    return render(request, "index.html")
 
 @api_view(['POST'])
+@permission_classes([IsAuthenticated])
 def showsong(request):
     try:
         al = request.data.get('album')
