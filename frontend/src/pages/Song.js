@@ -44,7 +44,7 @@ function Song() {
     event.preventDefault();
 
     // Call the API endpoint using fetch instead of Axios
-    fetch("http://127.0.0.1:8000/songs1/showsong/", {
+    fetch("https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/songs1/showsong/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

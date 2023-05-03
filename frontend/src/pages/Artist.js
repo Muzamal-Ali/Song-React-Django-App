@@ -112,7 +112,7 @@ export default function Artist() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/artists1/showartist/?page=${currentPage}`)
+    fetch(`https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/artists1/showartist/?page=${currentPage}`)
       .then(response => {
         if (!response.ok) {
           if(response.statusText === 'Unauthorized'){
