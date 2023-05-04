@@ -136,10 +136,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #     }
 # }
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': os.getenv('DB_HOST', None),
+        'HOST': "/cloudsql/cloud-work-314310:us-central1:training-week",
         'USER': os.getenv('DB_USER', None),
         'PASSWORD': os.getenv('DB_PWD', None),
         'NAME': os.getenv('DB_NAME', None),
