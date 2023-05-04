@@ -136,15 +136,26 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'HOST': "127.0.0.1",
+#         'USER': os.getenv('DB_USER', None),
+#         'PASSWORD': os.getenv('DB_PWD', None),
+#         'NAME': os.getenv('DB_NAME', None),
+#         'PORT': os.getenv('DB_PORT', None),
+#     }
+# }
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': "/cloudsql/cloud-work-314310:us-central1:training-week",
-        'USER': os.getenv('DB_USER', None),
-        'PASSWORD': os.getenv('DB_PWD', None),
-        'NAME': os.getenv('DB_NAME', None),
-        # 'PORT': os.getenv('DB_PORT', None),
+        'USER': "muzamal",
+        'PASSWORD': "abcd1234",
+        'NAME': "muzamal_db",
+        # 'PORT': 5433,
     }
 }
 
