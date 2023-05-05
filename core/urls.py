@@ -23,20 +23,17 @@ from django.views.generic import TemplateView
 urlpatterns = [
     # path('', index),
     path('',TemplateView.as_view(template_name="index.html")),
+    # path('admin/', TemplateView.as_view(template_name="index.html")),
+    path('artists/', TemplateView.as_view(template_name="index.html")),
+    path('albums/', TemplateView.as_view(template_name="index.html")),
+    path('songs/', TemplateView.as_view(template_name="index.html")),
+
+
     path('admin/', admin.site.urls),
     path('artists1/', include('artists.urls')),
     path('albums1/', include('albums.urls')),
     path('songs1/', include('songs.urls')),
-    path('api/', include('JWT.urls')),
-
-
-    
-    path('admin/', TemplateView.as_view(template_name="index.html")),
-    path('artists/', TemplateView.as_view(template_name="index.html")),
-    path('albums/', TemplateView.as_view(template_name="index.html")),
-    path('songs/', TemplateView.as_view(template_name="index.html"))
-
-
-
+    path('api/', include('JWT.urls'))
+ 
 
 ]

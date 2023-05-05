@@ -3,8 +3,8 @@ from albums.models import Album
 # Create your models here.
 #songs model
 class Song(models.Model):
-    id_songs = models.CharField(max_length=200,primary_key=True,unique=True)
-    name_song = models.CharField(max_length=200)
+    id_songs = models.CharField(max_length=300,primary_key=True,unique=True)
+    name_song = models.CharField(max_length=300)
     album_id = models.ForeignKey(Album, on_delete=models.CASCADE) 
     danceability = models.FloatField()
     duration_ms = models.BigIntegerField() 

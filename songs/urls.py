@@ -6,6 +6,4 @@ urlpatterns = [
     path('', views.Routes_song),
     path("song1", views.Routes_song1),
     path('showsong/', views.showsong),
-    # path('Uploadsong/', views.Upload_song),
-    # path('showalbums/', views.showalbums),
 ]
