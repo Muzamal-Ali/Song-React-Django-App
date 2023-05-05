@@ -16,27 +16,26 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from .views import index
+
+
+from albums import views
+from .views import index,social_login_redirect
 from django.views.generic import TemplateView
 
 
 urlpatterns = [
     # path('', index),
-    path('',TemplateView.as_view(template_name="index.html")),
-    path('admin/', admin.site.urls),
-    path('artists1/', include('artists.urls')),
-    path('albums1/', include('albums.urls')),
-    path('songs1/', include('songs.urls')),
-    path('api/', include('JWT.urls')),
-
-
-    
-    path('admin/', TemplateView.as_view(template_name="index.html")),
-    path('artists/', TemplateView.as_view(template_name="index.html")),
-    path('albums/', TemplateView.as_view(template_name="index.html")),
-    path('songs/', TemplateView.as_view(template_name="index.html"))
-
-
-
-
+    path("", TemplateView.as_view(template_name="index.html")),
+    # path('Gauth/', TemplateView.as_view(template_name="index.html")),
+    path("artists/", TemplateView.as_view(template_name="index.html")),
+    path("albums/", TemplateView.as_view(template_name="index.html")),
+    path("songs/", TemplateView.as_view(template_name="index.html")),
+    path("admin/", admin.site.urls),
+    path("artists1/", include("artists.urls")),
+    path("albums1/", include("albums.urls")),
+    path("songs1/", include("songs.urls")),
+    path("api/", include("JWT.urls")),
+    path("", include("allauth.urls")),
+    path("login_redirect/", social_login_redirect, name="login_redirect"),
+    # path('google/', TemplateView.as_view(template_name="index.html")),
 ]

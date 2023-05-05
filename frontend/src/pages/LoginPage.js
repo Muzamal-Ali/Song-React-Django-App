@@ -1,48 +1,3 @@
-// import React from 'react'
-
-// const LoginPage = () => {
-
-//     let loginUser = (e) => {
-//         e.preventDefault()
-//     }
-
-//     return (
-//         <div>
-//             <form onSubmit={loginUser}>
-//                 <input type="text" name="username" placeholder="Enter username"/>
-//                 <input type="password" name="password" placeholder="enter password"/>
-//                 <input type="submit"/>
-//             </form>
-//         </div>
-//     )
-// }
-
-// export default LoginPage
-
-
-//  ---------------------------------------------------------------------------------------
-// import React, {useContext} from 'react'
-// import AuthContext from '../context/AuthContext'
-
-// const LoginPage = () => {
-//     let {loginUser} = useContext(AuthContext)
-//     return (
-//         <div>
-//             <form onSubmit={loginUser}>
-//                 <input type="text" name="username" placeholder="Enter Username" />
-//                 <input type="password" name="password" placeholder="Enter Password" />
-//                 <input type="submit"/>
-//             </form>
-//         </div>
-//     )
-// }
-
-// export default LoginPage
-
-//  ----------------------------------------------------------------------------------------
-
-
-
 import React, { useContext } from "react";
 import { Grid, TextField, Button, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -51,6 +6,9 @@ import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
+import { redirect } from "react-router-dom";
+import {client_id,API_BASE_URL} from '../context/config'
+
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -71,8 +29,9 @@ const useStyles = makeStyles((theme) => ({
   },
   myDiv: {
     marginBottom: "30px",
-  },
+  }
 }));
+
 
 
 const LoginPage = () => {
@@ -94,6 +53,10 @@ const LoginPage = () => {
             label="username"
             type="username"
             id="username"
+            variant="outlined"
+            focused={false}
+            InputProps={{ style: { color: 'black' } }}
+            InputOutlinedProps={{ style: { borderColor: 'black' } }}
         />
         <TextField
             required
@@ -102,6 +65,10 @@ const LoginPage = () => {
             type="password"
             id="password"
             autoComplete="current-password"
+            variant="outlined"
+            focused={false}
+            InputProps={{ style: { color: 'black' } }}
+            InputOutlinedProps={{ style: { borderColor: 'black' } }}
         />
         <Button
           className={classes.button}
@@ -111,8 +78,18 @@ const LoginPage = () => {
         //   endIcon={<KeyboardArrowRightIcon />}
         >
           Submit
-        </Button>
+        </Button>   
       </form>
+
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Button 
+          href={`${API_BASE_URL}/google/login`}
+          className="google-login-button"
+          style={{ border: '1px solid black' }}
+        >
+          Login with Google 
+        </Button>
+      </div>
     </div>
   );
 };

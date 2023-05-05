@@ -4,6 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft'
 import AuthContext from '../context/AuthContext'
+import API_BASE_URL from '../context/config'
+import manager from "../helper/manager";
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,41 +35,14 @@ function Album() {
   const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
   const [error, setError] = useState(false);
-  let {authTokens, logoutUser} = useContext(AuthContext)
+  let {authTokens, logoutUser} = "useContext(AuthContext)"
   const classes = useStyles();
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Call the API endpoint using fetch instead of Axios
-    fetch('https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/albums1/showalbums/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization':'Bearer ' + String(authTokens.access)
-      },
-      body: JSON.stringify({ artists }),
-    })
-    .then((response) => {
-      if (!response.ok) {
-        setError(true);
-        throw new Error('Network response was not ok');
-      }
-      if(response.statusText === 'Unauthorized'){
-        logoutUser()
-      }
-      console.log(response)
-      return response.json();
-    })
-    .then((data) => {
-      setError(true);
-      setResults(data);
-    })
-    .catch((error) => {
-      console.error(error);
-      setResults([]);
-      // setResults('Error fetching songs. Please try again later.');
-    });
+    manager.album(authTokens, artists, setError, setResults,logoutUser)
+
   };
 
   const handlePreviousPage = () => setPage((prevPage) => prevPage - 1);
@@ -89,6 +65,10 @@ function Album() {
           className={classes.input}
           label="Artists"
           value={artists}
+          variant="outlined"
+          focused={false}
+          InputProps={{ style: { color: 'black' } }}
+          InputOutlinedProps={{ style: { borderColor: 'black' } }}
           onChange={(event) => setAlbum(event.target.value)}
         />
         <Button

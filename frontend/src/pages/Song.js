@@ -4,6 +4,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
 import AuthContext from "../context/AuthContext";
+import API_BASE_URL from '../context/config'
+import manager from "../helper/manager";
+
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -37,14 +40,13 @@ function Song() {
   const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
   const [error, setError] = useState(false);
-  let { authTokens, logoutUser } = useContext(AuthContext);
+  let { authTokens, logoutUser } = "useContext(AuthContext)";
   const classes = useStyles();
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Call the API endpoint using fetch instead of Axios
-    fetch("https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/songs1/showsong/", {
+    fetch(API_BASE_URL+"/songs1/showsong/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -71,6 +73,9 @@ function Song() {
         setResults([]);
         // setResults('Error fetching songs. Please try again later.');
       });
+
+    // manager.song(authTokens, album, setError, setResults,logoutUser)
+
   };
 
   const handlePreviousPage = () => setPage((prevPage) => prevPage - 1);
@@ -91,6 +96,10 @@ function Song() {
           className={classes.input}
           label="Album"
           value={album}
+          variant="outlined"
+          focused={false}
+          InputProps={{ style: { color: 'black' } }}
+          InputOutlinedProps={{ style: { borderColor: 'black' } }}
           onChange={(event) => setAlbum(event.target.value)}
         />
         <Button

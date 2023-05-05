@@ -57,14 +57,7 @@ const useStyles = makeStyles((theme) => {
     },
     secondaryAvatar: {
       backgroundColor: theme.palette.secondary.main,
-    },
-    // avatar: {
-    //   display: 'flex',
-    //   '& > *': {
-    //     // margin: theme.spacing(1),
-    //     marginLeft: theme.spacing(2)
-    //   },
-    // }
+    }
   }
 })
 
@@ -72,6 +65,7 @@ export default function Layout({ children }) {
   const classes = useStyles()
   const history = useNavigate()
   const location = useLocation()
+  // let {user, logoutUser} = ""
   let {user, logoutUser} = useContext(AuthContext)
 
   const menuItems = [
@@ -95,7 +89,6 @@ export default function Layout({ children }) {
 
   return (
     <div className={classes.root}>
-      {/* app bar */}
       <AppBar 
         position="fixed" 
         className={classes.appBar}
@@ -106,7 +99,6 @@ export default function Layout({ children }) {
           <Typography className={classes.date}>
             Today is the {format(new Date(), 'do MMMM Y')}
           </Typography>
-          {/* <Typography >{user &&   <p>{user.username} <Avatar className={classes.avatar}  alt={user.username} src='../images/avatar/ali.jpg' /></p>}</Typography> */}
           <Typography>
             {user && (
               <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -115,8 +107,6 @@ export default function Layout({ children }) {
               </div>
             )}
           </Typography>
-          {/* <Avatar className={classes.avatar}  alt="Ali" src={ali} /> */}
-          {/* <Avatar className={classes.avatar} src="/mario-av.png" /> */}
         </Toolbar>
       </AppBar>
 
@@ -146,25 +136,19 @@ export default function Layout({ children }) {
               <ListItemText primary={item.text} />
             </ListItem>
           ))}
-          {user ? (
-                 <ListItem button key='Logout' onClick={logoutUser}>
-                  <ExitToAppIcon color='secondary' style={{ marginRight: '30px' }}></ExitToAppIcon>
-                  <ListItemText primary={'Logout'} />
-                 </ListItem>
-            ): (
-                <ListItem button key='login' onClick="/login" >
-                  <LockOpenIcon color='secondary' style={{ marginRight: '30px' }}></LockOpenIcon>
-                  <ListItemText primary={'Login'} />
-                </ListItem>
-            )}
+
+          {(user || localStorage.getItem('Token')) && (
+            <ListItem button key='Logout' onClick={logoutUser}>
+              <ExitToAppIcon color='secondary' style={{ marginRight: '30px' }} />
+              <ListItemText primary='Logout' />
+            </ListItem>
+          )}
         </List>
         
       </Drawer>
-      
-      {/* main content */}
+
       <div className={classes.page}>
         <div className={classes.toolbar}></div>
-        {/* {user &&   <p>Hello {user.username}</p>} */}
         { children }
       </div>
     </div>

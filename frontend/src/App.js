@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Routes,Navigate } from 'react-router-dom'
 import Artist from './pages/Artist'
 import Song from './pages/Song'
 import Album from './pages/Album'
@@ -6,10 +6,9 @@ import Login from './pages/LoginPage'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { green } from '@material-ui/core/colors'
 import Layout from './components/Layout'
-import React from 'react'
-import PrivateRoute from './utils/PrivateRoute'
+import React,{useContext} from 'react'
+// import PrivateRoute from './utils/PrivateRoute'
 import { AuthProvider } from './context/AuthContext'
-
 
 const theme = createMuiTheme({
   palette: {
@@ -27,38 +26,37 @@ const theme = createMuiTheme({
   }
 })
 
+
+const check_token = ()=>{
+
+  if (window.location.search !== "") {
+    let token = String(window.location.search).split("=")[1];
+    localStorage.setItem('Token', token)
+    return true
+  }else if (localStorage.getItem("token")){
+    return true
+  }else if (localStorage.getItem("Token")){
+    return true
+  } else {
+    return false
+  }
+
+}
+const token = check_token()
+console.log(token)
+
 function App() {
   return (
     
     <ThemeProvider theme={theme}>
       <Router>
-        <AuthProvider>
+      <AuthProvider>
           <Layout>
             <Routes>
-            {/* <Switch> */}
-              <Route element={<PrivateRoute />}>
-                  <Route element={<Artist/>} path="/" exact/>
-                  <Route element={<Song/>} path="/songs"/>
-                  <Route element={<Album/>} path="/albums"/>
-              </Route>
               <Route path="/login" element={<Login />}/>
-              {/* <Route path="/" element={<PrivateRoute><Artist /></PrivateRoute>} />
-              <Route path="/songs" element={<PrivateRoute><Song /></PrivateRoute>} />
-              <Route path="/albums" element={<PrivateRoute><Album /></PrivateRoute>} />
-              <Route path="/login" element={<Login />}/> */}
-              {/* <Route exact path="/">
-                <Artist />
-              </Route>
-              <Route path="/songs">
-                <Song />
-              </Route>
-              <Route path="/albums">
-                <Album />
-              </Route>
-              <Route path="/login">
-                <Login />
-              </Route> */}
-            {/* </Switch> */}
+                  <Route element={token?<Artist/>: <Navigate to="/login"/>} path="/"/>
+                  <Route element={token?<Album/>: <Navigate to="/login"/>} path="/albums"/>
+                  <Route element={token ? <Song/>: <Navigate to="/login"/>} path="/songs"/>
             </Routes>
           </Layout>
         </AuthProvider>

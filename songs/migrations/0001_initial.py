@@ -5,25 +5,34 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
-        ('albums', '0001_initial'),
+        ("albums", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Song',
+            name="Song",
             fields=[
-                ('id_songs', models.CharField(max_length=200, primary_key=True, serialize=False, unique=True)),
-                ('name_song', models.CharField(max_length=200)),
-                ('danceability', models.FloatField()),
-                ('duration_ms', models.BigIntegerField()),
-                ('release_date', models.DateField()),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('album_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='albums.album')),
+                (
+                    "id_songs",
+                    models.CharField(
+                        max_length=200, primary_key=True, serialize=False, unique=True
+                    ),
+                ),
+                ("name_song", models.CharField(max_length=200)),
+                ("danceability", models.FloatField()),
+                ("duration_ms", models.BigIntegerField()),
+                ("release_date", models.DateField()),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                (
+                    "album_id",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="albums.album"
+                    ),
+                ),
             ],
         ),
     ]
