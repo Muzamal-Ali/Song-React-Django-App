@@ -19,14 +19,14 @@ export const AuthProvider = ({children}) => {
 
     let loginUser = async (e )=> {
         e.preventDefault()
-        // let response = manager.accesstoken(e.target.username.value,e.target.password.value)
-        let response = await fetch('https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/api/token/', {
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body:JSON.stringify({'username':e.target.username.value, 'password':e.target.password.value})
-        })
+        let response = manager.accesstoken(e.target.username.value,e.target.password.value)
+        // let response = await fetch('https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/api/token/', {
+        //     method:'POST',
+        //     headers:{
+        //         'Content-Type':'application/json'
+        //     },
+        //     body:JSON.stringify({'username':e.target.username.value, 'password':e.target.password.value})
+        // })
         let data = await response.json()
         console.log('data: ',data)
         console.log('response: ',response)
@@ -55,16 +55,16 @@ export const AuthProvider = ({children}) => {
 
     let updateToken = async ()=> {
 
-        // let response = manager.refreshtoken(authTokens)
-        let response = await fetch('https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/api/token/refresh/', {
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            // body:JSON.stringify({'refresh':authTokens?.refresh})
-            body:JSON.stringify({'refresh': authTokens && authTokens.refresh})
+        let response = manager.refreshtoken(authTokens)
+        // let response = await fetch('https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/api/token/refresh/', {
+        //     method:'POST',
+        //     headers:{
+        //         'Content-Type':'application/json'
+        //     },
+        //     // body:JSON.stringify({'refresh':authTokens?.refresh})
+        //     body:JSON.stringify({'refresh': authTokens && authTokens.refresh})
             
-        })
+        // })
 
         let data = await response.json()
         
