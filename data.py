@@ -1,6 +1,6 @@
 import json
 
-f = open('file2.json',encoding="utf8")
+f = open("file2.json", encoding="utf8")
 
 # returns JSON object as
 # a dictionary
@@ -8,12 +8,10 @@ data = json.load(f)
 new_list = []
 c = 0
 
-for j,k in enumerate(data):
+for j, k in enumerate(data):
     # print(data[j])
-    if k.get('model') == 'songs.song':
-        data[j]['pk'] = j
-
-
+    if k.get("model") == "songs.song":
+        data[j]["pk"] = j
 
 
 print(data)

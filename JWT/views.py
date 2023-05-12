@@ -9,7 +9,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
-        token['username'] = user.username
+        token["username"] = user.username
 
         return token
 
@@ -17,10 +17,8 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = MyTokenObtainPairSerializer
 
-@api_view(['GET'])
+
+@api_view(["GET"])
 def Routes(request):
-    routes = [
-        '/api/token',
-        '/api/token/refresh'
-    ]
+    routes = ["/api/token", "/api/token/refresh"]
     return Response(routes)

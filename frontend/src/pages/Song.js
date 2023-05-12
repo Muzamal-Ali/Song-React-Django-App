@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
 import AuthContext from "../context/AuthContext";
+import manager from "../helper/manager";
+
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -43,34 +45,8 @@ function Song() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Call the API endpoint using fetch instead of Axios
-    fetch("https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/songs1/showsong/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + String(authTokens.access),
-      },
-      body: JSON.stringify({ album }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          setError(true);
-          if(response.statusText === 'Unauthorized'){
-            logoutUser()
-          }
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setError(true);
-        setResults(data);
-      })
-      .catch((error) => {
-        console.error(error);
-        setResults([]);
-        // setResults('Error fetching songs. Please try again later.');
-      });
+    manager.song(authTokens, album, setError, setResults,logoutUser)
+
   };
 
   const handlePreviousPage = () => setPage((prevPage) => prevPage - 1);
@@ -91,6 +67,10 @@ function Song() {
           className={classes.input}
           label="Album"
           value={album}
+          variant="outlined"
+          focused={false}
+          InputProps={{ style: { color: 'black' } }}
+          InputOutlinedProps={{ style: { borderColor: 'black' } }}
           onChange={(event) => setAlbum(event.target.value)}
         />
         <Button
@@ -110,9 +90,6 @@ function Song() {
               <Typography variant="h6">{result.name_song}</Typography>
               <Typography variant="body1">
                 Duration: {millisToMinutesAndSeconds(result.duration_ms)}
-              </Typography>
-              <Typography variant="body1">
-                Release Date: {result.release_date}
               </Typography>
             </div>
           ))}

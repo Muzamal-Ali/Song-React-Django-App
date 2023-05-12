@@ -94,6 +94,10 @@ const LoginPage = () => {
             label="username"
             type="username"
             id="username"
+            variant="outlined"
+            focused={false}
+            InputProps={{ style: { color: 'black' } }}
+            InputOutlinedProps={{ style: { borderColor: 'black' } }}
         />
         <TextField
             required
@@ -102,6 +106,10 @@ const LoginPage = () => {
             type="password"
             id="password"
             autoComplete="current-password"
+            variant="outlined"
+            focused={false}
+            InputProps={{ style: { color: 'black' } }}
+            InputOutlinedProps={{ style: { borderColor: 'black' } }} 
         />
         <Button
           className={classes.button}

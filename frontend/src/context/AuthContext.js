@@ -2,6 +2,8 @@ import { createContext, useState, useEffect } from 'react'
 import jwt_decode from "jwt-decode";
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from '../context/config'
+import manager from "../helper/manager";
 
 const AuthContext = createContext()
 
@@ -17,7 +19,8 @@ export const AuthProvider = ({children}) => {
 
     let loginUser = async (e )=> {
         e.preventDefault()
-        let response = await fetch('https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/api/token/', {
+        // let response = manager.accesstoken(e.target.username.value,e.target.password.value)
+        let response = await fetch(API_BASE_URL+'/api/token/', {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -51,8 +54,9 @@ export const AuthProvider = ({children}) => {
 
 
     let updateToken = async ()=> {
-   
-        let response = await fetch('https://muzamal-django-dot-cloud-work-314310.ew.r.appspot.com/api/token/refresh/', {
+
+        // let response = manager.refreshtoken(authTokens)
+        let response = await fetch(API_BASE_URL+'/api/token/refresh/', {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
