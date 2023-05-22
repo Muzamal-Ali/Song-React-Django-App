@@ -29,6 +29,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        ref: dev1  # Set the reference branch to dev1
+
     ##### CREATE RUNTIME ENV FILE FOR DEPLOYMENT, AND ADD SERVICE-ACCOUNT-KEY.json IF NEEDED
     - name: Creating Runtime .env and add service-account-key
       run: |
