@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83dbd19b-7d94-44be-9072-9858191f138c" name="Changes" comment="initial commit">
+    <list default="true" id="8aa756c4-d5e5-46af-ae86-129800239bf8" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
