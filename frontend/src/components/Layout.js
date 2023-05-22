@@ -65,7 +65,6 @@ export default function Layout({ children }) {
   const classes = useStyles()
   const history = useNavigate()
   const location = useLocation()
-  // let {user, logoutUser} = ""
   let {user, logoutUser} = useContext(AuthContext)
 
   const menuItems = [
