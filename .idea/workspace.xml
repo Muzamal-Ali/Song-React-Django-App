@@ -4,87 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83dbd19b-7d94-44be-9072-9858191f138c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/main.0098c92f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.0098c92f.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.0098c92f.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.021a5e1f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.021a5e1f.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.021a5e1f.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.1de5990a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.1de5990a.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.1de5990a.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.2d804345.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.2d804345.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.2d804345.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.41453150.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.41453150.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.41453150.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.45a3df4c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.45a3df4c.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.45a3df4c.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.7ee253b0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.7ee253b0.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.7ee253b0.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.8ff940af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.8ff940af.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.8ff940af.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.c45bb178.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.c45bb178.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.c45bb178.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.cf91879d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.cf91879d.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.cf91879d.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.d0cc3e76.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.d0cc3e76.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.d0cc3e76.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.f5402558.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.f5402558.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.f5402558.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.0098c92f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.0098c92f.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.0098c92f.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.021a5e1f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.021a5e1f.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.021a5e1f.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.1de5990a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.1de5990a.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.1de5990a.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.2d804345.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.2d804345.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.2d804345.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.41453150.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.41453150.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.41453150.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.45a3df4c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.45a3df4c.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.45a3df4c.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.7ee253b0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.7ee253b0.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.7ee253b0.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.8ff940af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.8ff940af.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.8ff940af.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.c45bb178.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.c45bb178.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.c45bb178.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.cf91879d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.cf91879d.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.cf91879d.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.d0cc3e76.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.d0cc3e76.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.d0cc3e76.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.f5402558.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.f5402558.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/static/js/main.f5402558.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JWT/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/albums/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/albums/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/albums/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/albums/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artists/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/artists/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artists/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/artists/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songs/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/songs/tests.py" afterDir="false" />
+    <list default="true" id="83dbd19b-7d94-44be-9072-9858191f138c" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684763179531</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="initial commit">
+      <created>1684764100882</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684764100882</updated>
+    </task>
+    <task id="LOCAL-00020" summary="initial commit">
+      <created>1684764161596</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684764161596</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
