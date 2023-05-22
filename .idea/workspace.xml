@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8aa756c4-d5e5-46af-ae86-129800239bf8" name="Changes" comment="initial commit">
+    <list default="true" id="83dbd19b-7d94-44be-9072-9858191f138c" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/context/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/context/AuthContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Album.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Album.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Artist.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Artist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Song.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Song.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,28 +206,7 @@
       <option name="project" value="LOCAL" />
       <updated>1683272337248</updated>
     </task>
-    <task id="LOCAL-00018" summary="initial commit">
-      <created>1684763179531</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1684763179531</updated>
-    </task>
-    <task id="LOCAL-00019" summary="initial commit">
-      <created>1684764100882</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1684764100882</updated>
-    </task>
-    <task id="LOCAL-00020" summary="initial commit">
-      <created>1684764161596</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1684764161596</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
