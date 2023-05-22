@@ -120,7 +120,6 @@ LOGOUT_REDIRECT_URL = '/'
 # LOGIN_REDIRECT_URL = False
 LOGIN_URL = '/login_redirect/'
 LOGIN_REDIRECT_URL = '/login_redirect/'
-# LOGIN_REDIRECT_URL = '/artists1/'
 
 
 
@@ -165,17 +164,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "core.wsgi.application"
 
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-#
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -184,23 +172,9 @@ DATABASES = {
         'USER': os.getenv('DB_USER', None),
         'PASSWORD': os.getenv('DB_PWD', None),
         'NAME': os.getenv('DB_NAME', None),
-        'PORT': os.getenv('DB_PORT', None),
+        # 'PORT': os.getenv('DB_PORT', None),
     }
 }
-
-
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql_psycopg2",
-#         # 'HOST': "/cloudsql/cloud-work-314310:us-central1:training-week",
-#         "HOST": "127.0.0.1",
-#         "USER": "muzamal",
-#         "PASSWORD": "abcd1234",
-#         "NAME": "muzamal_db",
-#         "PORT": 5433,
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
